@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mydate {
+        ngay;
+        thang;
+        nam;
+
+        constructor(ngay,thang,nam) {
+            this.ngay = ngay;
+            this.thang = thang;
+            this.nam = nam;
+        }
+
+     getNgay(){
+        return this.ngay;
+        }
+
+        setNgay(value) {
+            this.ngay = value;
+        }
+
+        getThang() {
+            return this.thang;
+        }
+
+        setThang(value) {
+            this.thang = value;
+        }
+
+        getNam() {
+            return this.nam;
+        }
+
+        setNam(value) {
+            this.nam = value;
+        }
+    }
+    let pro = new mydate(24,10,2021);
+
+   alert( pro.getNgay()+ "/" + pro.getThang()+"/" + pro.getNam());
+
+</script>
+</body>
+</html>
