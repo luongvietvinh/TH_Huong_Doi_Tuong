@@ -7,15 +7,16 @@
 <body>
 <canvas id="myCanvas" width="500px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
-    function Circle(x, y, radius){
+    function Circle(x, y, radius) {
         this.x = x;
         this.y = y;
         this.radius = radius;
     }
-    function createCircle(){
+
+    function createCircle() {
         var ctx = document.getElementById("myCanvas").getContext("2d");
         var radius = Math.floor(50);
-        var circle= new Circle(200, 200, radius);
+        var circle = new Circle(200, 200, radius);
         ctx.beginPath();
         ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
         ctx.fill();

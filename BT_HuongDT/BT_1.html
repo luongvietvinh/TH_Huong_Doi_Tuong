@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xay dung hinh chu nhat</title>
+</head>
+<body>
+<canvas id="MyCanvas" width="800" height="700" style="border: 1px solid"></canvas>
+<script>
+    function Rectangle(x, y) {
+        this.x = x;
+        this.y = y;
+        this.getPerimeter = function () {
+            return (x + y) * 2;
+        }
+        this.areaRectangle = function () {
+            return x * y;
+        }
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() {
+        let red = getRandomHex();
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+    function createRectangle() {
+        let canvas = document.getElementById("MyCanvas")
+        let ctx = canvas.getContext("2d");
+        let color = getRandomColor();
+        let x = +prompt("Nhập cạnh thứ nhất: ");
+        let y = +prompt("Nhập cạnh thứ hai: ");
+        let rectangle = new Rectangle(x, y);
+        let perimeter = rectangle.getPerimeter();
+        let area = rectangle.areaRectangle();
+        document.write(rectangle + "<br>")
+        document.write(area + "<br>")
+        ctx.fillStyle = color; // color of fill
+        ctx.fillRect(rectangle.x, rectangle.y, 300, 150);//create rectangle
+    }
+
+    createRectangle();
+
+</script>
+</body>
+</html>

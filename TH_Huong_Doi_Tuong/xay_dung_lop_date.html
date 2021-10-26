@@ -11,14 +11,14 @@
         thang;
         nam;
 
-        constructor(ngay,thang,nam) {
+        constructor(ngay, thang, nam) {
             this.ngay = ngay;
             this.thang = thang;
             this.nam = nam;
         }
 
-     getNgay(){
-        return this.ngay;
+        getNgay() {
+            return this.ngay;
         }
 
         setNgay(value) {
@@ -41,9 +41,10 @@
             this.nam = value;
         }
     }
-    let pro = new mydate(24,10,2021);
 
-   alert( pro.getNgay()+ "/" + pro.getThang()+"/" + pro.getNam());
+    let pro = new mydate(24, 10, 2021);
+
+    alert(pro.getNgay() + "/" + pro.getThang() + "/" + pro.getNam());
 
 </script>
 </body>
