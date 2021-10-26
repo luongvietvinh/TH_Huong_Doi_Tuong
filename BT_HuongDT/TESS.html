@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XAY DUNG LOP TEMPERATURE</title>
+</head>
+<body>
+
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+
+        }
+
+
+        getK() {
+            return this.C + 273.15
+        }
+        getF() {
+            return (this.C * 1.8) + 32
+        }
+    }
+    let input = prompt("moi nhap")
+     input = new Temperature(30)
+    document.write("do kevin la :" + input.getK() + '<br>' )
+    document.write("do F la :" +  input.getF())
+
+</script>
+</body>
+</html>
